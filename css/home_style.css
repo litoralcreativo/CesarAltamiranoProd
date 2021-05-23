@@ -1,0 +1,120 @@
+* {
+  --purple: rgb(6, 2, 38);
+  --sunset: rgb(250, 175, 109);
+  --bluish: rgb(54, 25, 182);
+  --light: rgb(227, 227, 249);
+}
+
+.page-container {
+  width: 100%;
+  height: 100vh;
+}
+
+#home-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 110vh;
+  z-index: -1;
+  background-image: url("/media/Chesux-5.jpg");
+  background-size: cover;
+  background-position: top;
+  background-position-y: 0px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(6, 2, 38, 0.7) !important;
+}
+
+.navbar-brand {
+  display: flex;
+  width: 180px;
+  flex-direction: column;
+  transition: ease 0.5s;
+}
+
+.logos {
+  bottom: 0px;
+  position: relative;
+  padding: 5px 0px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.5s ease;
+}
+
+.hidden {
+  width: 120px;
+}
+
+#logo_up {
+  animation: 1.5s FadeSlide_In_RL;
+}
+#logo_down {
+  animation: 1.5s FadeSlide_In_LR;
+}
+
+#footer {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(6, 2, 38, 0.5) !important;
+}
+
+.redes {
+  width: 50px;
+  height: 50px;
+  font-size: 2em;
+  color: var(--sunset);
+  transition: 0.5s;
+}
+
+.redes:hover {
+  transform: scale(1.2);
+  color: var(--bluish);
+}
+
+/* ANIMATIONS */
+
+@keyframes FadeSlide_In_RL {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0 px);
+    opacity: 1;
+  }
+}
+@keyframes FadeSlide_In_LR {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0 px);
+    opacity: 1;
+  }
+}
+@keyframes FadeSlide_Out_LR {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* CUSTOM PARTS */
+
+/* width */
+::-webkit-scrollbar {
+  display: none;
+}
