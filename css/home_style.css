@@ -16,7 +16,7 @@
   width: 100%;
   height: 110vh;
   z-index: -1;
-  background-image: url("/media/Chesux-5.jpg");
+  background-image: url("../media/Chesux-5.jpg");
   background-size: cover;
   background-position: top;
   background-position-y: 0px;
