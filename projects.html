@@ -55,29 +55,10 @@
     <div id="projects-background" class="page-container"></div>
     <div class="transparent-div"></div>
 
-    <div id="first-project" class="content-section">
-      <div class="separator"></div>
+    <div id="projects-section" class="content-section">
       <div id="projects-selector">
-        <div class="project-logo wrapper">
-          <div class="frame">
-            <img
-              class="proj-logo-img"
-              src="media/elkaiser-light.png"
-              alt="El kaiser"
-            />
-          </div>
-        </div>
-        <div class="project-logo wrapper">
-          <div class="frame">
-            <img
-              class="proj-logo-img"
-              src="media/chichica-light.png"
-              alt="Chichica"
-            />
-          </div>
-        </div>
-        <div class="project-logo wrapper">
-          <div class="frame">
+        <div class="project-logo wrapper" onclick="ToogleProject(1)">
+          <div class="frame frame-blue">
             <img
               class="proj-logo-img"
               src="media/cachitasnow-light.png"
@@ -85,8 +66,8 @@
             />
           </div>
         </div>
-        <div class="project-logo wrapper">
-          <div class="frame">
+        <div class="project-logo wrapper" onclick="ToogleProject(2)">
+          <div class="frame frame-blue">
             <img
               class="proj-logo-img"
               src="media/aguasucia-light.png"
@@ -94,24 +75,108 @@
             />
           </div>
         </div>
+        <div class="project-logo wrapper" onclick="ToogleProject(3)">
+          <div class="frame frame-blue">
+            <img
+              class="proj-logo-img"
+              src="media/chichica-light.png"
+              alt="Chichica"
+            />
+          </div>
+        </div>
+        <div class="project-logo wrapper" onclick="ToogleProject(4)">
+          <div class="frame frame-blue">
+            <img
+              class="proj-logo-img"
+              src="media/elkaiser-light.png"
+              alt="El kaiser"
+            />
+          </div>
+        </div>
       </div>
-      <div class="separator"></div>
+      <div id="projects-container">
+        <div id="first-project" class="project">
+          <div
+            class="project-logo wrapper"
+            style="position: sticky; top: 100px"
+          >
+            <div class="frame frame-light">
+              <img
+                class="proj-logo-img"
+                src="media/cachitasnow-purple.png"
+                alt="Cachitas now"
+              />
+            </div>
+          </div>
+          <!-- <div class="vertical-line"></div> -->
+          <div class="project-info">
+            <div class="work"></div>
+            <div class="work"></div>
+            <div class="work"></div>
+          </div>
+        </div>
+        <div id="second-project" class="project reverse">
+          <div
+            class="project-logo wrapper"
+            style="position: sticky; top: 100px"
+          >
+            <div class="frame frame-light">
+              <img
+                class="proj-logo-img"
+                src="media/aguasucia-purple.png"
+                alt="Cachitas now"
+              />
+            </div>
+          </div>
+          <!-- <div class="vertical-line"></div> -->
+          <div class="project-info">
+            <div class="work"></div>
+            <div class="work"></div>
+            <div class="work"></div>
+          </div>
+        </div>
+        <div id="third-project" class="project">
+          <div
+            class="project-logo wrapper"
+            style="position: sticky; top: 100px"
+          >
+            <div class="frame frame-light">
+              <img
+                class="proj-logo-img"
+                src="media/chichica-purple.png"
+                alt="Cachitas now"
+              />
+            </div>
+          </div>
+          <!-- <div class="vertical-line"></div> -->
+          <div class="project-info">
+            <div class="work"></div>
+            <div class="work"></div>
+            <div class="work"></div>
+          </div>
+        </div>
+        <div id="fourth-project" class="project reverse">
+          <div
+            class="project-logo wrapper"
+            style="position: sticky; top: 100px"
+          >
+            <div class="frame frame-light">
+              <img
+                class="proj-logo-img"
+                src="media/elkaiser-purple.png"
+                alt="Cachitas now"
+              />
+            </div>
+          </div>
+          <!-- <div class="vertical-line"></div> -->
+          <div class="project-info">
+            <div class="work"></div>
+            <div class="work"></div>
+            <div class="work"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer id="footer">
-      <a
-        href="https://www.instagram.com/cesar.altamiranop/"
-        target="_blank"
-        class="redes"
-        ><i class="fab fa-instagram"></i
-      ></a>
-      <a
-        href="https://www.facebook.com/chesar.demarte"
-        target="_blank"
-        class="redes"
-        ><i class="fab fa-facebook-square"></i
-      ></a>
-      <div class="redes"><i class="fab fa-youtube"></i></div>
-    </footer>
     <script
       src="https://kit.fontawesome.com/f63d2fb36e.js"
       crossorigin="anonymous"

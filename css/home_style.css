@@ -61,9 +61,16 @@ html {
   transition: 0.5s;
 }
 
-.wrapper:hover .frame {
+.wrapper:hover .frame-blue {
   transform: rotateY(25deg) rotateZ(-4deg) translateZ(20px) scale(1);
   background-color: rgba(54, 25, 182, 0.5);
+  box-shadow: -35px 5px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.wrapper:hover .frame-light {
+  transform: rotateY(25deg) rotateZ(-4deg) translateZ(20px) scale(1);
+  background-color: rgba(227, 227, 249, 0.5);
   box-shadow: -35px 5px 10px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -117,6 +124,7 @@ html {
   justify-content: center;
   align-items: center;
   background-color: rgba(6, 2, 38, 0.5) !important;
+  z-index: 5;
 }
 
 .redes {
@@ -193,23 +201,47 @@ html {
 
 .content-section {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 110vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-#first-project {
-  background-color: var(--purple);
+  transition: 1s ease;
 }
 
 #projects-selector {
+  background-color: rgba(6, 2, 38, 0.8);
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.project {
+  width: 100%;
+  /* min-height: 0vh; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1em;
+  padding-bottom: 1em;
+  transition: 0.5s;
+  color: var(--light);
+  background-color: var(--light);
+}
+
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+.hide {
+  min-height: 0vh;
+  height: 0vh;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bluish);
 }
 
 .project-logo {
@@ -219,6 +251,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .proj-logo-img {
@@ -226,6 +259,32 @@ html {
   background-size: cover;
 }
 
-.separator {
-  height: 100px;
+.vertical-line {
+  min-height: 400px;
+  width: 2px;
+  border-radius: 2px;
+  background-color: var(--bluish);
+  margin: 0px 5px;
+}
+
+.project-info {
+  flex-grow: 10;
+  min-height: 80vh;
+  background-color: var(--light);
+  box-shadow: inset 0px 0px 50px 2px rgba(6, 2, 38, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 2em;
+}
+
+.work {
+  background-color: var(--light);
+  border: 1px solid rgba(6, 2, 38, 0.5);
+  min-height: 50vh;
+  width: 100%;
+  margin: 10px 0px;
+  border-radius: 10px;
 }
