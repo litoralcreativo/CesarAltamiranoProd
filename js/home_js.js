@@ -1,7 +1,7 @@
 const ScrollFuncs = (e) => {
   let scroll = window.pageYOffset;
 
-  const background = document.querySelector("#home-background");
+  const background = document.querySelector(".page-container");
   background.style.top = -(scroll * 0.05) + "px";
 
   const nbb = document.getElementById("navbar-brand");
@@ -15,3 +15,7 @@ const ScrollFuncs = (e) => {
 window.addEventListener("scroll", function (e) {
   ScrollFuncs(e);
 });
+
+// document.querySelector("#first-project").scrollIntoView({
+//   behavior: "smooth",
+// });
