@@ -50,6 +50,10 @@ const AddProjects = () => {
     .getElementById("first-project")
     .getElementsByClassName("project-info")[0];
 
+  let second_project = document
+    .getElementById("second-project")
+    .getElementsByClassName("project-info")[0];
+
   let third_project = document
     .getElementById("third-project")
     .getElementsByClassName("project-info")[0];
@@ -59,11 +63,15 @@ const AddProjects = () => {
     .getElementsByClassName("project-info")[0];
 
   first_project.innerHTML = "";
+  second_project.innerHTML = "";
   third_project.innerHTML = "";
   fourth_project.innerHTML = "";
 
   const cachitas = projects.filter(
     (element) => element.artist == "Cachitas Now"
+  );
+  const aguasucia = projects.filter(
+    (element) => element.artist == "Agua Sucia y los Mareados"
   );
   const elkaiser = projects.filter((element) => element.artist == "El Kaiser");
   const chichica = projects.filter((element) => element.artist == "Chichica");
@@ -129,5 +137,33 @@ const AddProjects = () => {
       </div>
     </div>`;
     fourth_project.insertAdjacentHTML("beforeend", work_element);
+  }
+
+  for (let i = 0; i < aguasucia.length; i++) {
+    const work = aguasucia[i];
+    const work_element = `<div class="work">
+      <img
+        class="work-art"
+        src="${work.artwork}"
+        alt=""
+      />
+      <div class="work-details">
+        ${
+          work.spotify
+            ? `<iframe
+              src="${work.spotify}"
+              width="100%"
+              height="80"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>`
+            : ""
+        }
+        <h3 class="work-title">Title: <strong>${work.name}</strong></h3>
+        <p class="work-description"><strong>Descripción: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nam non cumque animi assumenda voluptate facilis maiores, qui, recusandae, reiciendis illum voluptatibus architecto. Facilis unde facere quas voluptas delectus incidunt.</strong></p>
+      </div>
+    </div>`;
+    second_project.insertAdjacentHTML("beforeend", work_element);
   }
 };

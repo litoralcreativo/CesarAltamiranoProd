@@ -229,6 +229,8 @@ const projects = [
   {
     name: "Alma de Botón",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_1.jpeg",
+    spotify: "https://open.spotify.com/embed/album/7zGKArmbtyAbZjgmP7iNSH",
     rol: ["Grabación", "Edición", "Mezcla", "Mástering"],
     instruments: [
       {
@@ -256,6 +258,8 @@ const projects = [
   {
     name: "En Los Techos Carnabal",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_2.jpeg",
+    spotify: "https://open.spotify.com/embed/album/7Br62Hvcrj15wRuu925K9h",
     rol: ["Grabación", "Edición", "Mezcla", "Mástering"],
     instruments: [
       {
@@ -283,6 +287,8 @@ const projects = [
   {
     name: "La Cumparsita",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_3.jpeg",
+    spotify: "https://open.spotify.com/embed/album/46uXj41dy9UR0GLQKgRjnH",
     rol: ["Grabación", "Edición", "Mezcla", "Mástering"],
     instruments: [
       {
@@ -310,6 +316,8 @@ const projects = [
   {
     name: "Los Invisibles",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_4.jpeg",
+    spotify: "https://open.spotify.com/embed/album/5NA09bEZrqQWVRflNDJwzX",
     rol: ["Grabación", "Edición", "Mezcla", "Mástering"],
     instruments: [
       {
@@ -337,6 +345,8 @@ const projects = [
   {
     name: "Vas a Ver Cuando Estés Solo",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_5.jpeg",
+    spotify: "https://open.spotify.com/embed/album/1T4YuKtrBw2MCyRAFsxAo9",
     rol: "Grabación - Edición - Mezcla - Mástering",
     instruments: [
       {
@@ -364,6 +374,8 @@ const projects = [
   {
     name: "Si Te Dan Ganas",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_6.jpeg",
+    spotify: "https://open.spotify.com/embed/album/53GWcroZTtbUTOtbgbJ7Wb",
     rol: ["Grabación", "Edición", "Mezcla", "Mástering"],
     instruments: [
       {
@@ -389,8 +401,10 @@ const projects = [
     ],
   },
   {
-    name: "Hoy Voy a Bailar",
+    name: "Voy a Bailar",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_7.jpeg",
+    spotify: "https://open.spotify.com/embed/album/7ljNsDyyPBgfryUCA41IQa",
     rol: ["Grabación", "Edición", "Mezcla", "Mástering"],
     instruments: [
       {
@@ -418,6 +432,8 @@ const projects = [
   {
     name: "Hoy Nos Vamos de Joda",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_8.jpeg",
+    spotify: "https://open.spotify.com/embed/album/0gCLEPtYuWoNjry3dQzUZ2",
     rol: ["Grabación", "Edición", "Mezcla", "Mástering"],
     instruments: [
       {
@@ -445,6 +461,8 @@ const projects = [
   {
     name: "Mano a Mano",
     artist: "Agua Sucia y los Mareados",
+    artwork: "media/portadas/aguasucia_9.jpeg",
+    spotify: "https://open.spotify.com/embed/album/1423XIslHBsK84Y7McXj1W",
     rol: ["Grabación", "Edición", "Mezcla", "Mástering"],
     instruments: [
       {
