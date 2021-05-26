@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/home_style.css" />
+    <script src="json/projects.js"></script>
     <title>Cesar Altamirano | Projects</title>
   </head>
   <body>
@@ -58,7 +59,7 @@
     <div id="projects-section" class="content-section">
       <div id="projects-selector">
         <div class="project-logo wrapper" onclick="ToogleProject(1)">
-          <div class="frame frame-blue">
+          <div class="frame blue-bg">
             <img
               class="proj-logo-img"
               src="media/cachitasnow-light.png"
@@ -67,7 +68,7 @@
           </div>
         </div>
         <div class="project-logo wrapper" onclick="ToogleProject(2)">
-          <div class="frame frame-blue">
+          <div class="frame blue-bg">
             <img
               class="proj-logo-img"
               src="media/aguasucia-light.png"
@@ -76,7 +77,7 @@
           </div>
         </div>
         <div class="project-logo wrapper" onclick="ToogleProject(3)">
-          <div class="frame frame-blue">
+          <div class="frame blue-bg">
             <img
               class="proj-logo-img"
               src="media/chichica-light.png"
@@ -85,7 +86,7 @@
           </div>
         </div>
         <div class="project-logo wrapper" onclick="ToogleProject(4)">
-          <div class="frame frame-blue">
+          <div class="frame blue-bg">
             <img
               class="proj-logo-img"
               src="media/elkaiser-light.png"
@@ -97,7 +98,7 @@
       <div id="projects-container">
         <div id="first-project" class="project">
           <div class="project-logo wrapper">
-            <div class="frame frame-light">
+            <div class="frame light-bg">
               <img
                 class="proj-logo-img"
                 src="media/cachitasnow-purple.png"
@@ -108,13 +109,11 @@
           <!-- <div class="vertical-line"></div> -->
           <div class="project-info">
             <div class="work"></div>
-            <div class="work"></div>
-            <div class="work"></div>
           </div>
         </div>
         <div id="second-project" class="project reverse">
           <div class="project-logo wrapper">
-            <div class="frame frame-light">
+            <div class="frame light-bg">
               <img
                 class="proj-logo-img"
                 src="media/aguasucia-purple.png"
@@ -125,13 +124,11 @@
           <!-- <div class="vertical-line"></div> -->
           <div class="project-info">
             <div class="work"></div>
-            <div class="work"></div>
-            <div class="work"></div>
           </div>
         </div>
         <div id="third-project" class="project">
           <div class="project-logo wrapper">
-            <div class="frame frame-light">
+            <div class="frame light-bg">
               <img
                 class="proj-logo-img"
                 src="media/chichica-purple.png"
@@ -142,13 +139,11 @@
           <!-- <div class="vertical-line"></div> -->
           <div class="project-info">
             <div class="work"></div>
-            <div class="work"></div>
-            <div class="work"></div>
           </div>
         </div>
         <div id="fourth-project" class="project reverse">
           <div class="project-logo wrapper">
-            <div class="frame frame-light">
+            <div class="frame light-bg">
               <img
                 class="proj-logo-img"
                 src="media/elkaiser-purple.png"
@@ -158,8 +153,6 @@
           </div>
           <!-- <div class="vertical-line"></div> -->
           <div class="project-info">
-            <div class="work"></div>
-            <div class="work"></div>
             <div class="work"></div>
           </div>
         </div>
@@ -180,5 +173,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/home_js.js"></script>
+    <script>
+      AddProjects();
+    </script>
   </body>
 </html>
