@@ -2,8 +2,14 @@ const ScrollFuncs = (e) => {
   let scroll = window.pageYOffset;
 
   const background = document.querySelector(".page-container");
-  background.style.backgroundPositionY = -(scroll * 0.04) + "px";
+  const paralax_2_down = document.getElementsByClassName("pllx_2_down");
 
+  background.style.backgroundPositionY = -(scroll * 0.04) + "px";
+  Array.from(paralax_2_down).forEach(
+    (item) => (item.style.top = 50 + scroll * 0.02 + "vh")
+  );
+
+  /* NAVBAR SHRINK */
   const nbb = document.getElementById("navbar-brand");
   if (scroll > 10) {
     nbb.className = "navbar-brand hidden";

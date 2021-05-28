@@ -15,7 +15,8 @@ html {
 }
 
 #home-background,
-#projects-background {
+#projects-background,
+#about-background {
   position: fixed;
   top: 0;
   width: 100%;
@@ -31,6 +32,69 @@ html {
 }
 #projects-background {
   background-image: url("../media/Chesux-6.jpg");
+}
+
+#about-background {
+  background-image: url("../media/Chesux-3.jpg");
+}
+
+.frost-glass {
+  /* border-radius: 15px; */
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  height: 220px;
+  width: 370px;
+  position: relative;
+}
+
+.frost-glass:before {
+  content: "";
+  backdrop-filter: blur(5px) saturate(100%) contrast(100%) brightness(100%);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.franja {
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  animation: Grow_height 1s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, auto, auto, 0);
+}
+
+.franja h1 {
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+  /* height: 100%; */
+  position: fixed;
+  top: 50vh;
+  transform: translateY(-50%);
+  z-index: 1;
+  /* position: relative; */
+  color: white;
+  opacity: 1;
+  padding: 50px;
+  animation: 2s ShowIn ease;
+}
+
+#about-photo {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+#about-photo img {
+  /* width: 100%; */
+  height: 100%;
+  background-size: cover;
 }
 
 .transparent-div {
@@ -88,7 +152,7 @@ html {
   top: 0;
   width: 100%;
   background-color: rgba(6, 2, 38, 0.9) !important;
-  z-index: 5;
+  z-index: 10;
 }
 
 .navbar-brand {
@@ -179,7 +243,6 @@ html {
     opacity: 0;
   }
 }
-
 @keyframes ShrinkUp {
   0% {
     height: 100vh;
@@ -189,6 +252,30 @@ html {
   }
   100% {
     height: 0vh;
+  }
+}
+@keyframes Grow_height {
+  0% {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  50% {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+@keyframes ShowIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
