@@ -129,21 +129,21 @@ html {
   width: 100%;
   height: auto;
   position: sticky;
-  top: 150px;
+  top: 100px;
 }
 
 .photo {
   width: 400px;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
   background-color: white;
-  padding: 20px;
+  padding: 5px;
 }
 
 .photo_img {
   width: 100%;
-  height: 80%;
-  background-image: url("media/chesar_studio.jpeg");
+  height: 100%;
+  background-image: url("media/chesar_purple.jpeg");
   background-size: cover;
 }
 
@@ -529,22 +529,20 @@ html {
     height: 400px;
     overflow: hidden;
     background-color: white;
-    padding: 20px;
+    padding: 2px;
   }
 
   .franja h1 {
     font-size: 1.5em;
     text-align: center;
     width: 100%;
-    /* height: 100%; */
     position: fixed;
     top: 50vh;
     transform: translateY(-50%);
     z-index: 1;
-    /* position: relative; */
     color: white;
     opacity: 1;
-    padding: 50px;
+    padding: 0px;
     animation: 2s ShowIn ease;
   }
 }
