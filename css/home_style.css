@@ -473,6 +473,31 @@ html {
   flex-direction: column;
 }
 
+#goup_btn {
+  position: fixed;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  bottom: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--purple);
+  border-radius: 50%;
+  opacity: 1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: var(--bluish);
+}
+
+#goup_btn:hover {
+  transform: scale(1.2);
+  color: var(--sunset);
+}
+
 @media (max-width: 600px) {
   .project {
     flex-direction: column;
