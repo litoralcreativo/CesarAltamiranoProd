@@ -570,4 +570,8 @@ html {
     padding: 0px;
     animation: 2s ShowIn ease;
   }
+
+  #goup_btn {
+    display: none;
+  }
 }
