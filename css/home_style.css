@@ -36,12 +36,11 @@ html {
 }
 
 #about-background {
-  background: linear-gradient(
-      217deg,
-      rgba(6, 2, 38, 1),
-      rgba(6, 2, 38, 0.8) 70.71%
-    ),
-    linear-gradient(127deg, rgba(250, 175, 109, 0.8), rgba(54, 25, 182, 1) 50%);
+  background-image: url("../media/Chesux-3.jpg");
+}
+
+.right_content {
+  color: white;
 }
 
 .frost-glass {
@@ -62,7 +61,7 @@ html {
 }
 
 .about_header {
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   background-color: transparent;
   display: flex;
@@ -90,7 +89,7 @@ html {
   width: 100%;
   /* height: 100%; */
   position: fixed;
-  top: 25vh;
+  top: 50vh;
   transform: translateY(-50%);
   z-index: 1;
   /* position: relative; */
@@ -107,6 +106,16 @@ html {
   align-items: stretch;
   padding: 0 5%;
   animation: FadeSlide_Out_DU 2s ease-out;
+  background: linear-gradient(
+      217deg,
+      rgba(6, 2, 100, 0.8),
+      rgba(6, 2, 10, 0.1) 70.71%
+    ),
+    linear-gradient(
+      60deg,
+      rgba(250, 175, 109, 0.5),
+      rgba(54, 25, 182, 0.2) 70.1%
+    );
 }
 
 .left_content,
