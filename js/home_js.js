@@ -2,6 +2,7 @@ const ScrollFuncs = (e) => {
   let scroll = window.pageYOffset;
 
   const background = document.querySelector(".page-container");
+  // const photograph = document.querySelector(".photo");
   const paralax_2_down = document.getElementsByClassName("pllx_2_down");
 
   background.style.backgroundPositionY = -(scroll * 0.04) + "px";
@@ -9,6 +10,19 @@ const ScrollFuncs = (e) => {
     (item) => (item.style.top = 50 + scroll * 0.02 + "vh")
   );
 
+  // if (scroll > 200 && scroll < 800) {
+  //   let scroll_fix = scroll - 200;
+  //   let max = 800 - 200;
+
+  //   photograph.style.transform = `rotateY(${
+  //     (scroll_fix * 20) / max
+  //   }deg) rotateZ(${(scroll_fix * -2) / max}deg) translateZ(${
+  //     (scroll_fix * 10) / max
+  //   }px) scale(1)`;
+  //   photograph.style.boxShadow = `${(scroll_fix * -25) / max}px ${
+  //     (scroll_fix * 5) / max
+  //   }px ${(scroll_fix * 10) / max}px rgba(0, 0, 0, .5)`;
+  // }
   /* NAVBAR SHRINK */
   const nbb = document.getElementById("navbar-brand");
   if (scroll > 10) {

@@ -12,6 +12,7 @@ html {
 .page-container {
   width: 100%;
   height: 100vh;
+  perspective: 1000px;
 }
 
 #home-background,
@@ -35,7 +36,12 @@ html {
 }
 
 #about-background {
-  background-image: url("../media/Chesux-3.jpg");
+  background: linear-gradient(
+      217deg,
+      rgba(6, 2, 38, 1),
+      rgba(6, 2, 38, 0.8) 70.71%
+    ),
+    linear-gradient(127deg, rgba(250, 175, 109, 0.8), rgba(54, 25, 182, 1) 50%);
 }
 
 .frost-glass {
@@ -55,9 +61,18 @@ html {
   width: 100%;
 }
 
+.about_header {
+  height: 50vh;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .franja {
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   background-color: rgba(0, 0, 0, 0.2);
   animation: Grow_height 1s;
   display: flex;
@@ -75,7 +90,7 @@ html {
   width: 100%;
   /* height: 100%; */
   position: fixed;
-  top: 50vh;
+  top: 25vh;
   transform: translateY(-50%);
   z-index: 1;
   /* position: relative; */
@@ -85,15 +100,41 @@ html {
   animation: 2s ShowIn ease;
 }
 
-#about-photo {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
+#about_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 0 5%;
+  animation: FadeSlide_Out_DU 2s ease-out;
 }
 
-#about-photo img {
-  /* width: 100%; */
-  height: 100%;
+.left_content,
+.right_content {
+  /* height: 100%; */
+  padding: 20px;
+  text-align: justify;
+}
+
+.left_content .wrapper {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 150px;
+}
+
+.photo {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  background-color: white;
+  padding: 20px;
+}
+
+.photo_img {
+  width: 100%;
+  height: 80%;
+  background-image: url("/media/chesar_studio.jpeg");
   background-size: cover;
 }
 
@@ -112,12 +153,13 @@ html {
   perspective: 1000px;
 }
 
-.frame {
+.frame,
+.frame_light {
   /* background-color: rgba(250, 175, 109, 0.8); */
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 5px;
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,6 +170,12 @@ html {
 .wrapper:hover .frame {
   transform: rotateY(25deg) rotateZ(-4deg) translateZ(20px) scale(1);
   box-shadow: -35px 5px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.wrapper:hover .frame_light {
+  transform: rotateY(5deg) rotateZ(-1deg) translateZ(10px) scale(1);
+  box-shadow: -15px 5px 10px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -243,6 +291,20 @@ html {
     opacity: 0;
   }
 }
+@keyframes FadeSlide_Out_DU {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @keyframes ShrinkUp {
   0% {
     height: 100vh;
@@ -256,14 +318,14 @@ html {
 }
 @keyframes Grow_height {
   0% {
-    width: 5px;
-    height: 5px;
+    width: 2px;
+    height: 2px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0);
   }
   50% {
     width: 100%;
-    height: 5px;
+    height: 2px;
     background-color: rgba(255, 255, 255, 1);
   }
 }
@@ -447,5 +509,33 @@ html {
   }
   .work-details {
     margin: 10px 10px;
+  }
+
+  #about_content {
+    flex-direction: column;
+  }
+
+  .photo {
+    width: auto;
+    height: 400px;
+    overflow: hidden;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .franja h1 {
+    font-size: 1.5em;
+    text-align: center;
+    width: 100%;
+    /* height: 100%; */
+    position: fixed;
+    top: 25vh;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* position: relative; */
+    color: white;
+    opacity: 1;
+    padding: 50px;
+    animation: 2s ShowIn ease;
   }
 }
