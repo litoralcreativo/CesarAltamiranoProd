@@ -2,27 +2,27 @@ const ScrollFuncs = (e) => {
   let scroll = window.pageYOffset;
 
   const background = document.querySelector(".page-container");
-  // const photograph = document.querySelector(".photo");
   const paralax_2_down = document.getElementsByClassName("pllx_2_down");
+  const goupbtn = document.getElementById("goup_btn");
 
-  background.style.backgroundPositionY = -(scroll * 0.04) + "px";
+  if (goupbtn) {
+    if (scroll > visualViewport.height) {
+      goupbtn.style.opacity = "1";
+      goupbtn.style.transform = "translateX(0px)";
+    } else {
+      goupbtn.style.opacity = "0";
+      goupbtn.style.transform = "translateX(150px)";
+    }
+  }
+  let bgPosY = parseFloat(background.style.backgroundPositionY.split("px")[0]);
+  if (scroll * 0.4 < visualViewport.height) {
+    background.style.backgroundPositionY = -(scroll * 0.04) + "px";
+  }
+
   Array.from(paralax_2_down).forEach(
     (item) => (item.style.top = 50 + scroll * 0.02 + "vh")
   );
 
-  // if (scroll > 200 && scroll < 800) {
-  //   let scroll_fix = scroll - 200;
-  //   let max = 800 - 200;
-
-  //   photograph.style.transform = `rotateY(${
-  //     (scroll_fix * 20) / max
-  //   }deg) rotateZ(${(scroll_fix * -2) / max}deg) translateZ(${
-  //     (scroll_fix * 10) / max
-  //   }px) scale(1)`;
-  //   photograph.style.boxShadow = `${(scroll_fix * -25) / max}px ${
-  //     (scroll_fix * 5) / max
-  //   }px ${(scroll_fix * 10) / max}px rgba(0, 0, 0, .5)`;
-  // }
   /* NAVBAR SHRINK */
   const nbb = document.getElementById("navbar-brand");
   if (scroll > 10) {
@@ -185,5 +185,48 @@ const AddProjects = () => {
       </div>
     </div>`;
     second_project.insertAdjacentHTML("beforeend", work_element);
+  }
+};
+
+let overLink = false;
+
+const showHoverImg = (index, event) => {
+  const img = document.getElementById("hover_img");
+  let src = "media/chesar_outside.jpg";
+  switch (index) {
+    case 1:
+      src = "media/chichica-light.png";
+      break;
+    case 2:
+      src = "media/elkaiser-light.png";
+      break;
+    case 3:
+      src = "media/cachitasnow-light.png";
+      break;
+  }
+  overLink = true;
+  img.style.backgroundImage = `url(${src})`;
+  img.style.opacity = "1";
+  if (overLink) {
+    const img = document.getElementById("hover_img");
+    const x = event.clientX;
+    const y = event.clientY;
+    const height = img.offsetWidth;
+    const width = img.offsetWidth;
+    img.style.left = x - width / 2 + "px";
+    img.style.top = y + 30 + "px";
+  }
+};
+
+const hideHoverImg = (center = false) => {
+  overLink = false;
+  const img = document.getElementById("hover_img");
+  img.style.opacity = "0";
+  if (center) {
+    const x = window.pageYOffset;
+    const y = window.pageYOffset;
+    const width = img.offsetWidth;
+    img.style.top = y + 30 + "px";
+    img.style.left = x - width / 2 + "px";
   }
 };

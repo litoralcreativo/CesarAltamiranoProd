@@ -9,6 +9,30 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: var(--sunset);
+}
+
+a:hover {
+  color: var(--sunset);
+}
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection {
+  color: var(--sunset);
+  background-color: var(--bluish);
+}
+
+strong::selection,
+a::selection {
+  color: var(--bluish);
+  background-color: var(--sunset);
+}
+
 .page-container {
   width: 100%;
   height: 100vh;
@@ -17,7 +41,8 @@ html {
 
 #home-background,
 #projects-background,
-#about-background {
+#about-background,
+#contact-background {
   position: fixed;
   top: 0;
   width: 100%;
@@ -37,6 +62,10 @@ html {
 
 #about-background {
   background-image: url("../media/Chesux-3.jpg");
+}
+
+#contact-background {
+  background-image: url("../media/Chesux.jpg");
 }
 
 .right_content {
@@ -133,8 +162,8 @@ html {
 }
 
 .photo {
-  width: 400px;
-  height: 500px;
+  width: 350px;
+  height: 450px;
   overflow: hidden;
   background-color: white;
   padding: 5px;
@@ -145,6 +174,21 @@ html {
   height: 100%;
   background-image: url("media/chesar_purple.jpeg");
   background-size: cover;
+}
+
+#hover_img {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
 }
 
 .transparent-div {
@@ -258,6 +302,9 @@ html {
 #footer {
   height: 8vh;
   width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -302,6 +349,12 @@ html {
 .shrink {
   height: 0vh;
   animation: ShrinkUp 2s ease;
+}
+
+#contact_container {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: white;
 }
 
 /* ANIMATIONS */
@@ -522,16 +575,20 @@ html {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: 0.5s ease;
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  color: var(--bluish);
 }
 
-#goup_btn:hover {
-  transform: scale(1.2);
+#goup_btn i {
   color: var(--sunset);
+  transition: 0.3s ease;
+}
+
+#goup_btn:hover i {
+  color: var(--bluish);
 }
 
 @media (max-width: 600px) {
@@ -609,5 +666,15 @@ html {
 
   #goup_btn {
     display: none;
+  }
+
+  #hover_img {
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+  }
+
+  #contact_container {
+    width: 80%;
   }
 }
